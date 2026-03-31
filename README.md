@@ -124,7 +124,3 @@ Potential improvements include:
 - Automated stress detection
 - Integration with system monitoring tools
 
----
-
-## Author
-**Khushi Jindal**  
