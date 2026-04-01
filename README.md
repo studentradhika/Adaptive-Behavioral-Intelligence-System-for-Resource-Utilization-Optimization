@@ -39,7 +39,7 @@ The project uses the **CIFAR-10 dataset**, a standard benchmark dataset for imag
 Dataset Details:
 - 60,000 color images
 - 10 image classes
-- Image resolution: 32 × 32
+- Image resolution:32 × 32
 
 Classes:
 Airplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship, Truck.
@@ -120,7 +120,7 @@ Monitoring GPU performance is essential for:
 Potential improvements include:
 
 - Real-time GPU monitoring dashboard
-- Multi-GPU workload analysis
 - Automated stress detection
 - Integration with system monitoring tools
+- Integration of machine learning models to predict GPU performance and thermal behavior
 
