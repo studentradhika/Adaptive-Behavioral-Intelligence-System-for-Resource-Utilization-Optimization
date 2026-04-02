@@ -1,126 +1,111 @@
-# AI Workload Based GPU Monitoring and Analysis
+# 🚀 AI Workload Based GPU Monitoring & Analysis
 
-## Overview
-This project analyzes how Artificial Intelligence workloads impact GPU performance.  
-A Convolutional Neural Network (CNN) is trained on the CIFAR-10 dataset using PyTorch in Google Colab. During the training process, GPU metrics such as utilization, memory usage, and temperature are monitored and analyzed.
+## 📌 Overview
 
-The goal is to understand how deep learning workloads influence GPU behavior and system resource utilization.
+This project analyzes how **AI workloads impact GPU performance** using deep learning.
 
----
+A CNN model is trained on the CIFAR-10 dataset, and GPU metrics such as:
 
-## Problem Statement
-Modern AI models require high computational power which is typically provided by GPUs. Heavy AI workloads can lead to increased GPU utilization, higher temperature, and increased memory consumption.
+* 🔥 Temperature
+* ⚡ Load (%)
+* 💾 Memory Usage
 
-This project studies how GPU resources behave when a deep learning workload is applied.
-
----
-
-## Objectives
-- Train a CNN model on the CIFAR-10 dataset  
-- Generate an AI workload using deep learning training  
-- Monitor GPU load, memory usage, and temperature  
-- Visualize GPU performance through graphs  
+are monitored and analyzed to understand **GPU stress behavior**.
 
 ---
 
-## Technologies Used
-- Python  
-- PyTorch  
-- Torchvision  
-- Google Colab  
-- GPUtil  
-- Matplotlib  
+## 🧠 Key Features
+
+### 1️⃣ Before Workload Monitoring
+
+* Captures GPU metrics in idle state
+* Stores data in CSV format
+
+### 2️⃣ During Training Monitoring (🔥 NEW)
+
+* Real-time GPU monitoring during model training
+* Captures:
+
+  * Temperature changes
+  * Load spikes
+  * Memory usage growth
+* Provides actual **stress behavior**
+
+### 3️⃣ After Workload Monitoring
+
+* Observes GPU after training (cooling phase)
+
+### 4️⃣ Behavioral Analysis (Intelligence Layer)
+
+* Classifies GPU states:
+
+  * 🟢 Idle
+  * 🔵 Normal
+  * 🟡 Moderate Stress
+  * 🟠 High Load
+  * 🔴 Overheating
+* Calculates **Stress Score**
 
 ---
 
-## Dataset
-The project uses the **CIFAR-10 dataset**, a standard benchmark dataset for image classification.
+## 📊 Project Structure
 
-Dataset Details:
-- 60,000 color images
-- 10 image classes
-- Image resolution:32 × 32
+```
+backend/
+frontend/
 
-Classes:
-Airplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship, Truck.
-
----
-
-## Project Workflow
-1. Install required libraries
-2. Load and preprocess the CIFAR-10 dataset
-3. Build a Convolutional Neural Network (CNN)
-4. Train the model using GPU acceleration
-5. Monitor GPU metrics
-6. Visualize GPU performance using graphs
+Before workload.ipynb
+Model_Training.ipynb
+gpu_after_workload_monitoring_project.ipynb
+Behavioral_analysis.ipynb   👈 Intelligence logic
+gpu_full_data.csv
+final_gpu_analysis.csv
+```
 
 ---
 
-## Methodology
+## ⚙️ Technologies Used
 
-### 1. Environment Setup
-Libraries such as PyTorch, Torchvision, and GPUtil are installed in the runtime environment.
-
-### 2. Dataset Loading
-The CIFAR-10 dataset is downloaded and loaded using Torchvision utilities.
-
-### 3. Model Creation
-A CNN architecture is implemented with:
-- Convolution layers
-- Pooling layers
-- Fully connected layers
-
-### 4. Model Training
-The CNN model is trained for multiple epochs on GPU to generate computational workload.
-
-### 5. GPU Monitoring
-GPU metrics are collected using GPUtil and NVIDIA monitoring tools:
-- GPU Load
-- Memory Usage
-- Temperature
-
-### 6. Data Visualization
-Matplotlib is used to generate graphs showing GPU load and temperature over time.
+* Python 🐍
+* PyTorch 🔥
+* GPUtil 📊
+* Pandas
+* Matplotlib
 
 ---
 
-## Results
+## 📈 How It Works
 
-| Metric | Observation |
-|------|------|
-| GPU Temperature | Increased during training |
-| GPU Memory Usage | Increased during workload |
-| GPU Utilization | Higher during model training |
-
-These results demonstrate that deep learning training significantly impacts GPU resources.
-
----
-
-## Visualization Output
-The project generates graphs showing:
-
-- GPU Load Over Time
-- GPU Temperature Over Time
-
-These visualizations help understand how GPU performance changes during AI training.
+1. Capture GPU data **before workload**
+2. Train CNN model (CIFAR-10)
+3. Monitor GPU **during training**
+4. Capture GPU **after workload**
+5. Apply behavioral analysis
+6. Generate graphs & insights
 
 ---
 
-## Conclusion
-This project demonstrates the relationship between AI training workloads and GPU performance. Deep learning tasks increase GPU utilization, memory consumption, and temperature.
+## 📊 Sample Insights
 
-Monitoring GPU performance is essential for:
-- Efficient hardware utilization
-- System stability
-- Performance optimization
+* Before workload → GPU mostly **Idle**
+* During training → **Temperature & Memory increase**
+* After workload → GPU enters **cooling phase**
+* Stress Score helps quantify GPU pressure
 
 ---
 
-## Future Improvements
-Potential improvements include:
+## 🚀 Future Enhancements
 
-- Real-time GPU monitoring dashboard
-- Automated stress detection
-- Integration with system monitoring tools
-- Integration of machine learning models to predict GPU performance and thermal behavior
+* Live dashboard (Streamlit)
+* Alert system for overheating 🚨
+* Cloud deployment
+* Multi-GPU monitoring
 
+
+
+
+---
+
+## ⭐ Conclusion
+
+This project demonstrates how AI workloads affect GPU behavior and provides a **data-driven approach to monitor and analyze GPU stress patterns**.
