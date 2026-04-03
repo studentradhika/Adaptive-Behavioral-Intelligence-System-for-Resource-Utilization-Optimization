@@ -1,0 +1,4 @@
+flask
+pynvml
+numpy
+psutil
