@@ -1,111 +1,86 @@
-# 🚀 AI Workload Based GPU Monitoring & Analysis
+# 🚀 GPU Optimization & Monitoring System
 
-## 📌 Overview
-
-This project analyzes how **AI workloads impact GPU performance** using deep learning.
-
-A CNN model is trained on the CIFAR-10 dataset, and GPU metrics such as:
-
-* 🔥 Temperature
-* ⚡ Load (%)
-* 💾 Memory Usage
-
-are monitored and analyzed to understand **GPU stress behavior**.
+A full-stack intelligent system for monitoring, analyzing, and optimizing GPU/CPU workloads with real-time visualization and adaptive training strategies.
 
 ---
 
-## 🧠 Key Features
+## 📌 Project Overview
 
-### 1️⃣ Before Workload Monitoring
+This project simulates and optimizes training workloads using **Static** and **Adaptive modes** with a modern UI dashboard.
 
-* Captures GPU metrics in idle state
-* Stores data in CSV format
-
-### 2️⃣ During Training Monitoring (🔥 NEW)
-
-* Real-time GPU monitoring during model training
-* Captures:
-
-  * Temperature changes
-  * Load spikes
-  * Memory usage growth
-* Provides actual **stress behavior**
-
-### 3️⃣ After Workload Monitoring
-
-* Observes GPU after training (cooling phase)
-
-### 4️⃣ Behavioral Analysis (Intelligence Layer)
-
-* Classifies GPU states:
-
-  * 🟢 Idle
-  * 🔵 Normal
-  * 🟡 Moderate Stress
-  * 🟠 High Load
-  * 🔴 Overheating
-* Calculates **Stress Score**
+### 🔥 Core Capabilities:
+- 📊 Real-time system monitoring (CPU, Memory, GPU)
+- 🤖 Adaptive optimization logic
+- 📈 Interactive graphs
+- 🔐 OTP-based authentication
+- ⚡ Glassmorphism UI
 
 ---
 
-## 📊 Project Structure
+## 🛠️ Tech Stack
 
-```
-backend/
-frontend/
+### 🔹 Frontend
+- React.js
+- Axios
+- Recharts
+- Tailwind CSS
 
-Before workload.ipynb
-Model_Training.ipynb
-gpu_after_workload_monitoring_project.ipynb
-Behavioral_analysis.ipynb   👈 Intelligence logic
-gpu_full_data.csv
-final_gpu_analysis.csv
-```
+### 🔹 Backend
+- Flask (Python)
+- REST APIs
+- Flask-CORS
 
----
-
-## ⚙️ Technologies Used
-
-* Python 🐍
-* PyTorch 🔥
-* GPUtil 📊
-* Pandas
-* Matplotlib
+### 🔹 Additional
+- pynvml (GPU monitoring)
+- Email OTP authentication
 
 ---
 
-## 📈 How It Works
+## ✨ Features
 
-1. Capture GPU data **before workload**
-2. Train CNN model (CIFAR-10)
-3. Monitor GPU **during training**
-4. Capture GPU **after workload**
-5. Apply behavioral analysis
-6. Generate graphs & insights
+### 🔐 Authentication
+- Email + OTP login
+- Secure access control
+- Logout functionality
 
----
+### 📊 Dashboard
+- Live CPU / Memory / GPU stats
+- Smooth UI with animations
+- Glass effect design
 
-## 📊 Sample Insights
+### ⚙️ Control Panel
+- Static / Adaptive mode switch
+- Batch size control
 
-* Before workload → GPU mostly **Idle**
-* During training → **Temperature & Memory increase**
-* After workload → GPU enters **cooling phase**
-* Stress Score helps quantify GPU pressure
+### 🧠 Adaptive Optimization
+- Auto-adjust batch size
+- Improves system performance
 
----
+### 📈 Graphs
+- Performance trend graph
+- Static vs Adaptive comparison
+- Experiment history logs
 
-## 🚀 Future Enhancements
-
-* Live dashboard (Streamlit)
-* Alert system for overheating 🚨
-* Cloud deployment
-* Multi-GPU monitoring
-
-
-
+### 🤖 Auto Training
+- Runs multiple training cycles automatically
 
 ---
 
-## ⭐ Conclusion
+## ⚙️ Setup Instructions
 
-This project demonstrates how AI workloads affect GPU behavior and provides a **data-driven approach to monitor and analyze GPU stress patterns**.
+### 🔹 Backend Setup
+
+```bash
+cd backend
+pip install -r requirements.txt
+python app.py
+
+### 🔹 Frontend Setup
+
+cd frontend
+npm install
+npm start
+
+
+
+
