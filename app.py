@@ -7,6 +7,7 @@ from auth.auth import auth
 from core.training_engine import run_training
 from flask_cors import CORS
 
+
 app = Flask(__name__)
 CORS(app)
 app.register_blueprint(auth)
@@ -134,5 +135,6 @@ def get_history():
     return jsonify(history)
 
 # ✅ RUN SERVER
+import os
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
