@@ -1,24 +1,42 @@
 import { useState } from "react";
-import axios from "axios";
+import emailjs from "emailjs-com";
 
 function Login({ onLogin }) {
 
   const [email, setEmail] = useState("");
   const [otp, setOtp] = useState("");
+  const [generatedOtp, setGeneratedOtp] = useState("");
   const [step, setStep] = useState(1);
 
   const sendOtp = () => {
-    axios.post("http://127.0.0.1:5000/send-otp", { email })
-      .then(() => setStep(2));
+
+    const otpValue = Math.floor(100000 + Math.random() * 900000).toString();
+    setGeneratedOtp(otpValue);
+
+    emailjs.send(
+      "service_4y9qy3j",
+      "template_cfd3ehg",
+      {
+        to_email: email,
+        otp: otpValue
+      },
+      "TN7Uf75jGo2grh027"
+    )
+    .then(() => {
+      setStep(2);
+    })
+    .catch(() => {
+      alert("Error sending OTP");
+    });
   };
 
   const verifyOtp = () => {
-    axios.post("http://127.0.0.1:5000/verify-otp", { email, otp })
-      .then(() => {
-        localStorage.setItem("auth", "true");
-        onLogin();
-      })
-      .catch(() => alert("Invalid OTP"));
+    if (otp === generatedOtp) {
+      localStorage.setItem("auth", "true");
+      onLogin();
+    } else {
+      alert("Invalid OTP");
+    }
   };
 
   return (
