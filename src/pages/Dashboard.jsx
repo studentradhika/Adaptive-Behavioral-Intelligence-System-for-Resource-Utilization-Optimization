@@ -26,7 +26,7 @@ function Dashboard({ onLogout }) {
 
   // 🔹 UPDATE SETTINGS
   const updateSettings = () => {
-    axios.post("http://127.0.0.1:5000/control", {
+    axios.post("https://gpu-optimizationn-system.onrender.com/control", {
       mode,
       batch_size: batchSize
     });
@@ -34,7 +34,7 @@ function Dashboard({ onLogout }) {
 
   // 🔹 START TRAINING
   const startTraining = () => {
-    axios.get("http://127.0.0.1:5000/train")
+    axios.get("https://gpu-optimizationn-system.onrender.com/train")
       .then(res => {
 
         const before = res.data.before;
@@ -76,7 +76,7 @@ function Dashboard({ onLogout }) {
 
   // 🔹 COMPARE
   const runComparison = () => {
-    axios.get("http://127.0.0.1:5000/compare")
+    axios.get("https://gpu-optimizationn-system.onrender.com/compare")
       .then(res => setCompareData(res.data));
   };
 
