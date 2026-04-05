@@ -65,6 +65,8 @@ This project simulates and optimizes training workloads using **Static** and **A
 - Runs multiple training cycles automatically
 
 ---
+## LIVE DEPLOYMENT LINK
+https://celadon-torte-969cfe.netlify.app/
 
 ## ⚙️ Setup Instructions
 
@@ -80,6 +82,8 @@ python app.py
 cd frontend
 npm install
 npm start
+
+
 
 
 
