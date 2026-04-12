@@ -12,9 +12,8 @@ This project simulates and optimizes training workloads using **Static** and **A
 - 📊 Real-time system monitoring (CPU, Memory, GPU)
 - 🤖 Adaptive optimization logic
 - 📈 Interactive graphs
-- 🔐 OTP-based authentication
 - ⚡ Glassmorphism UI
-
+- 🔐 OTP-based authentication
 ---
 
 ## 🛠️ Tech Stack
@@ -27,8 +26,9 @@ This project simulates and optimizes training workloads using **Static** and **A
 
 ### 🔹 Backend
 - Flask (Python)
-- REST APIs
 - Flask-CORS
+- REST APIs
+
 
 ### 🔹 Additional
 - pynvml (GPU monitoring)
